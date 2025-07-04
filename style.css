@@ -28,7 +28,7 @@ ul li a{
     color: #fff;
     padding: 5px 20px;
     border: 1px solid transparent;
-    transition: 0/5ease;
+    transition: 0.5ease;
 }
 
 ul li a:hover{
@@ -189,4 +189,31 @@ ul li.active a{
     color: #a42834;
     text-align: center;
     margin-bottom: 20px;
+}
+.bodydriver{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/cov2.jpg);
+    background-size: cover; /* Make sure it covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating if image is small */
+    min-height: 100vh; /* Ensure the body itself always takes at least 100% viewport height */
+
+}
+.driverheader {
+  
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+
+}
+
+.driver-content {
+    margin-top: 40px;
+    color: white;
+    text-align: left;
+    padding-left: 50px;
+    display: block;
+}
+.driver-content span {
+    color: #7494ec;
 }
