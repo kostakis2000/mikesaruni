@@ -1,0 +1,239 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Century;
+}
+.headerhome{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/cov2.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin: 30px;
+    margin-right: 60px;
+    font-size: 17px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5ease;
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+.logo img{
+    float: left;
+    width: 100px;
+    height: auto;
+}
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+.title{
+    position: absolute;
+    top: 37%;
+    left: 40%;
+    transition: translate(-50%,-50%);
+}
+
+.title h1{
+    color: #fff;
+    font-size: 40px;
+}
+.driverheader {
+  
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+
+}
+.bodyindex{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/cov2.jpg);
+    background-size: cover; /* Make sure it covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating if image is small */
+    min-height: 100vh; /* Ensure the body itself always takes at least 100% viewport height */
+    margin: 0; /* Important: reset body margin if not already done by * */
+    padding: 0; /* Important: reset body padding if not already done by * */
+    display: flex; /* Use flexbox for body to control vertical layout */
+    flex-direction: column; /* Stack children vertically (header, then main content) */
+}
+/* ABOUT SLIDER STYLES */
+.about-slider-wrapper * {
+  box-sizing: border-box;
+}
+
+.about-slider-wrapper {
+  background: transparent;
+  overflow: hidden;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-slider-container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 500px;
+  background: #f5f5f5;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about-slide .about-item {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-slide .about-item:nth-child(1),
+.about-slide .about-item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-slide .about-item:nth-child(3) {
+  left: 50%;
+}
+.about-slide .about-item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.about-slide .about-item:nth-child(n + 5) {
+  left: calc(50% + 440px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.about-item .about-content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.about-slide .about-item:nth-child(2) .about-content {
+  display: block;
+}
+
+.about-content .about-name {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: about-animate 1s ease-in-out 1 forwards;
+}
+
+.about-content .about-des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: about-animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.about-content button {
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: about-animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes about-animate {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.about-button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.about-button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.about-button button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-slider-container {
+    height: 400px;
+  }
+  .about-item .about-content {
+    left: 20px;
+    width: 80%;
+  }
+  .about-content .about-name {
+    font-size: 24px;
+  }
+}

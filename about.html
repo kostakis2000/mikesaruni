@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport system</title>
-    <link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -23,5 +30,66 @@
             </ul>
         </div>
     </header>
+
+  <section class="about-slider-wrapper">
+    <div class="about-slider-container">
+      <div class="about-slide">
+        <div class="about-item" style="background-image: url('images/vision.jpg');">
+          <div class="about-content">
+            <div class="about-name">How to Get Started</div>
+            <div class="about-des">Learn how to get started with our transport system easily.</div>
+            <button>See More</button>
+          </div>
+        </div>
+
+        <div class="about-item" style="background-image: url('images/whoweare.jpg');">
+          <div class="about-content">
+            <div class="about-name">Who We Are</div>
+            <div class="about-des">Meet the team behind the scenes.</div>
+            <button>See More</button>
+          </div>
+        </div>
+
+        <div class="about-item" style="background-image: url('images/whatwedo.jpg');">
+          <div class="about-content">
+            <div class="about-name">What We Do</div>
+            <div class="about-des">Explore the services we offer to students and guardians.</div>
+            <button>See More</button>
+          </div>
+        </div>
+
+        <div class="about-item" style="background-image: url('images/howtogetstarted.jpg');">
+          <div class="about-content">
+            <div class="about-name">Safety and Tracking</div>
+            <div class="about-des">Understand our safety protocols and tracking features.</div>
+            <button>See More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-button">
+        <button class="about-prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="about-next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const nextBtn = document.querySelector('.about-next');
+    const prevBtn = document.querySelector('.about-prev');
+
+    nextBtn.addEventListener('click', () => {
+      const items = document.querySelectorAll('.about-item');
+      document.querySelector('.about-slide').appendChild(items[0]);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      const items = document.querySelectorAll('.about-item');
+      document.querySelector('.about-slide').prepend(items[items.length - 1]);
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>
