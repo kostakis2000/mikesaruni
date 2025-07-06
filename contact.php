@@ -27,13 +27,13 @@
 
   <div class="contact-info">
     <h2>📍 Our Address</h2>
-    <p>123 Learning Lane, Nairobi, Kenya</p>
+    <p>mikesaruni@gmail.com,Strathmore Nairobi, Kenya</p>
 
     <h2>📞 Phone</h2>
-    <p>📱 +254 712 345 678</p>
+    <p>📱 +254 769639067 or +254 791388117</p>
 
     <h2>📧 Email</h2>
-    <p>info@example.com</p>
+    <p>mikesaruni@gmail.com</p>
   </div>
 
   <div class="contact-form">
