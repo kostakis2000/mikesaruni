@@ -29,7 +29,7 @@ if (!isset($_SESSION['email'])) {
             <ul>
                 
                 <li><a href="about.html"><i class="fa fa-question-circle"></i> Aboutus</a></li>
-                <li><a href="contact.html"><i class="fa fa-volume-control-phone"></i> Contact</a></li>
+                <li><a href="contact.php"><i class="fa fa-volume-control-phone"></i> Contact</a></li>
                 <li><a href="track.html"><i class="fa fa-map-marker"></i> Trackstudent</a></li>
                 <?php if (isset($_SESSION['email'])): ?>
     <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>

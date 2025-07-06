@@ -241,3 +241,76 @@ ul li.active a{
     padding-left: 50px;
     display: block;
 }
+.contact-container {
+  max-width: 1000px;
+  margin: 10px auto; /* Reduced top spacing */
+  padding: 20px 20px;  /* Tighter padding */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  font-family: Century;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;  /* Reduced gap between left and right */
+  justify-content: flex-start;  /* Align items to the left */
+  align-items: flex-start;
+}
+
+.contact-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: #7494ec;
+  margin-bottom: 10px;  /* Less margin */
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 320px;
+  max-width: 40%; /* Prevents it from expanding too wide */
+}
+
+.contact-info h2 {
+  font-size: 18px;
+  margin: 8px 0 4px 0;
+}
+
+.contact-info p {
+  margin: 0 0 8px 0;
+}
+
+.contact-form {
+  flex: 2;
+  min-width: 300px;
+  max-width: 58%;  /* Constrains right side so it's not pushed far */
+  padding-left: 10px; /* Slight padding from left info section */
+}
+
+.contact-form label {
+  margin-top: 10px;
+  font-size: 15px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f9f9f9;
+}
+
+.contact-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
