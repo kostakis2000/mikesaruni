@@ -26,18 +26,18 @@
   <h1 class="contact-title">Contact Us</h1>
 
   <div class="contact-info">
-    <h2>📍 Our Address</h2>
+    <h2> Our Address</h2>
     <p>mikesaruni@gmail.com,Strathmore Nairobi, Kenya</p>
 
-    <h2>📞 Phone</h2>
-    <p>📱 +254 769639067 or +254 791388117</p>
+    <h2> Phone</h2>
+    <p> +254 769639067 or +254 791388117</p>
 
-    <h2>📧 Email</h2>
+    <h2>Email</h2>
     <p>mikesaruni@gmail.com</p>
   </div>
 
   <div class="contact-form">
-    <h2>📬 Send Us a Message</h2>
+    <h2>Send Us a Message</h2>
     <form action="submit_contact.php" method="POST">
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required>
