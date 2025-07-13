@@ -21,7 +21,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="admin.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <style>#map { height: 400px; width: 100%; margin-top: 20px; }</style>
+  <style>#map { height: 400px; width: 80%; margin-top: 20px; }</style>
 </head>
 <body class="bodyadmin">
   <header class="parentheader">
@@ -41,7 +41,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
   </header>
 
   <div class="parent-content">
-    <h1>Welcome</h1>
+    <h1>This is the Admin Page</h1>
     <div id="map"></div>
 
     <div class="contact-messages">
