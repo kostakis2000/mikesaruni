@@ -5,7 +5,7 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 $host = "localhost";
-$user = "root";        // UPDATE if needed
+$user = "root";        
 $pass = "";
 $dbname = "users_db";
 $conn = new mysqli($host, $user, $pass, $dbname);
@@ -13,6 +13,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +21,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="admin.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>#map { height: 400px; width: 100%; margin-top: 20px; }</style>
 </head>
 <body class="bodyadmin">
   <header class="parentheader">
@@ -72,23 +74,26 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
     </div>
   </div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    let map = L.map('map').setView([0,0], 15);
-    L.marker([0,0]).addTo(map);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data © OpenStreetMap contributors'
-    }).addTo(map);
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+let map = L.map('map').setView([0, 0], 15);
+let marker = L.marker([0, 0]).addTo(map);
 
-    function updateMap() {
-      fetch('get_driver_location.php')
-        .then(r => r.json())
-        .then(d => {
-          map.setView([d.latitude, d.longitude]);
-          L.marker([d.latitude, d.longitude]).addTo(map);
-        });
-    }
-    setInterval(updateMap, 10000);
-  </script>
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data © OpenStreetMap contributors'
+}).addTo(map);
+
+function updateMap() {
+  fetch('get_driver_location.php')
+    .then(res => res.json())
+    .then(data => {
+      marker.setLatLng([data.latitude, data.longitude]);
+      map.setView([data.latitude, data.longitude]);
+    })
+    .catch(err => console.error('Error fetching location:', err));
+}
+
+setInterval(updateMap, 10000); // update every 10 seconds
+</script>
 </body>
 </html>
